@@ -1,0 +1,29 @@
+<!-- Q30) Write a JavaScript program to check whether a string "Script" appears at the 5th (index 4) position in a given string. If "Script" appears in the string, return the string without "Script" otherwise return thr original one. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript program to check whether a string "Script" appears at the 5th (index 4) position in a given string. If "Script" appears in the string, return the string without "Script" otherwise return thr original one.</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+        function check_script(str)
+        {
+            if (str.length < 6) {
+                return str;
+            }
+            let result_str = str;
+
+            if (str.substring(10, 4) == 'Script')
+            {
+                result_str = str.substring(0, 4) + str.substring(10, str.length);
+            }
+            return result_str;
+        }
+
+        console.log(check_script("JavaScript"));
+        console.log(check_script("CoffeeScript"));
+    </script>
+</body>
+</html>

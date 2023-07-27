@@ -1,0 +1,28 @@
+<!-- Q42) Write a JavaScript program to check whether three given numbers are increasing in strict or in soft mode.
+Note: Strict mode -> 10, 15, 31 : Soft mode -> 24, 22 ,31 or 22, 22, 31   -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript program to check whether three given numbers are increasing in strict or in soft mode.</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+        function number_order(x, y, z) {
+            if (y > x && z > y)
+            {
+                return "strict mode";
+            }
+            else if(z > y)
+            return "Soft mode";
+            else
+            return "Undefined";
+        }
+
+        console.log(number_order(10,15,31));
+        console.log(number_order(24,22,31));
+        console.log(number_order(50,21,15));
+    </script>
+</body>
+</html>

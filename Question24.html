@@ -1,0 +1,21 @@
+<!-- Q24) Write a JavaScript program to create another string from a given string with the first character of the given string added to the front and back. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript program to create a new string from a given string with the first character of the given string added at the front and back</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+        function front_back(str)
+        {
+            first = str.substring(0,1);
+            return first + str + first;
+        }
+        console.log(front_back('a'));
+        console.log(front_back('ab'));
+        console.log(front_back('abc'));
+    </script>
+</body>
+</html>

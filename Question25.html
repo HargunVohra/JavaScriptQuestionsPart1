@@ -1,0 +1,28 @@
+<!-- Q25) Write a JavaScript program to check whether a given positive number is multiple of 3 or 7 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript program to check whether a given positive number is multiple of 3 or 7</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+        function test37(x)
+        {
+            if (x % 3 == 0 || x % 7 ==0)
+            {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        console.log(test37(12));
+        console.log(test37(14));
+        console.log(test37(10));
+        console.log(test37(11));
+    </script>
+</body>
+</html>
