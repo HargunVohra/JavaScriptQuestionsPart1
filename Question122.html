@@ -1,0 +1,28 @@
+<!-- Q122) Write a JavaScript program to check whether a given array of integers represents a strictly increasing or decreasing sequence. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript program to check whether a given array of integers represents a strictly increasing or decreasing sequence.</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+        function is_monotonous(num) {
+            if (num.length === 1) {
+                return true;
+            }
+            var num_direction = num[1] - num[0];
+            for (var i = 0; i < num.length - 1; i++) {
+                if (num_direction * (num[i + 1] - num[i]) <= 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        console.log(is_monotonous([1, 2, 3]));
+        console.log(is_monotonous([1, 2, 2]));
+        console.log(is_monotonous([-3, -2, -1]));
+    </script>
+</body>
+</html>

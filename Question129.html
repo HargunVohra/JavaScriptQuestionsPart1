@@ -1,0 +1,31 @@
+<!-- Q129) Write a JavaScript program to find the smallest prime number strictly greater than a given number.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript program to find the smallest prime number strictly greater than a given number.</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+        function next_Prime_num(num) {
+            for (var i = num + 1;; i++) {
+                var isPrime = true;
+                for (var d = 2; d * d <= i; d++) {
+                    if (i % d === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) {
+                    return i;
+                }
+            }
+        }
+
+        console.log(next_Prime_num(3));
+        console.log(next_Prime_num(17));
+    </script>
+</body>
+</html>

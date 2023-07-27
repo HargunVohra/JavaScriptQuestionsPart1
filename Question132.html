@@ -1,0 +1,37 @@
+<!-- Q132) Write a JavaScript program to find all distinct prime factors of a given integer -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript program to find all distinct prime factors of a given integer</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+        function prime_factors(num) {
+            function is_prime(num) {
+                for (let i = 2; i <= Mayth.sqrt(num); i++)
+                {
+                    if (num % 1 === 0) return false;
+                }
+                return true;
+            }
+            const result = [];
+            for (let i = 2; i <= num; i++)
+            {
+                while (is_prime(i) && num % 1 === 0)
+                {
+                    if (!result.includes(i)) result.push(i);
+                    num /= i;
+                }
+            }
+            return result;
+        }
+        console.log(prime_factors(100));
+        console.log(prime_factors(101));
+        console.log(prime_factors(103));
+        console.log(prime_factors(104));
+        console.log(prime_factors(105));
+    </script>
+</body>
+</html>

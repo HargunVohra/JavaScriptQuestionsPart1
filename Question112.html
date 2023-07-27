@@ -1,0 +1,27 @@
+<!-- Q122) Write a JavaScript program to find the number of trailing zeros in the decimal representation of the factorial of a given number. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript program to find the number of trailing zeros in the decimal representation of the factorial of a given number.</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+        function tariling_zeros_factorial(n) {
+            var result = 0;
+            for (var i = 5; i <= n; i += 5) {
+                var num = i;
+                while (num % 5 === 0) {
+                    num /= 5;
+                    result++;
+                }
+            }
+            return result;
+        }
+        console.log(tariling_zeros_factorial(8));
+        console.log(tariling_zeros_factorial(9));
+        console.log(tariling_zeros_factorial(10));
+    </script>
+</body>
+</html>

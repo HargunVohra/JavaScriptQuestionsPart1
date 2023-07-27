@@ -1,0 +1,27 @@
+<!-- Q125) Write a JavaScript program to find the longest string in a given array. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript program to find the longest string in a given array.</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+        function longest_str_in_array(arra) {
+            var max_str = arra[0].length;
+            var ans = arra[0];
+            for (var i = 1; i < arra.length; i++) {
+                var maxi = arra[i].length;
+                if (maxi > max_str) {
+                    ans = arra[i];
+                    max_str = maxi;
+                }
+            }
+            return ans;
+        }
+        console.log(longest_str_in_array(["ab", "a", "abcd"]));
+        console.log(longest_str_in_array(["ab", "ab", "ab"]));
+    </script>
+</body>
+</html>
